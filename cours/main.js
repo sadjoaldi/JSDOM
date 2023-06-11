@@ -33,13 +33,22 @@ questionContainer.addEventListener("click",() => {
 })
 
 btn1.addEventListener("click", () => {    
-   response.style.visibility = "visible";
-    // response.style.background = "green";
+   response.classList.add("show-response");
+    response.style.background = "green";
 })
 btn2.addEventListener("click", () => {
-    // response.style.visibility = "visible";
-    // response.style.background = "red";
+    response.style.visibility = "visible";
+    response.style.background = "red";
 })
+
+// les priorités en css sont les suivantes:  nous avons dabord: #id > .class > baliseHTML. Mais la <div> est superieur à tous.
 
 
 // ******************************
+
+// Mouse Events: tous les evenements qu'on peut avoir sur la souris: c'est le mouvement de la souris "mousemove"
+const mousemove = document.querySelector('.mousemove');
+
+window.addEventListener('mousemove', (e) => {
+   console.log(e.target);
+})
