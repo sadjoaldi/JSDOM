@@ -61,3 +61,43 @@ window.addEventListener('mouseup', () => {
    mousemove.style.transform = "scale(1) translate(-50%,-50%)";
    mousemove.style.border = "2px solid teal"
 })
+
+questionContainer.addEventListener("mouseenter", () => {
+    questionContainer.style.background = "rgba(0,0,0,0.6)";
+})
+
+questionContainer.addEventListener("mouseout", () => {
+    questionContainer.style.background = "pink";
+})
+
+response.addEventListener("mouseover", () => {
+    response.style.transform = "rotate(1deg)"
+})
+
+
+// **********************************************
+// le keyPress event
+const keyPresscontainer = document.querySelector(".keypress");
+const key = document.getElementById("key");
+// voici une des façon d'ajouter une piste audio sur JS: 
+const ring = () => {
+    const audio = new Audio(); 
+    audio.src ="./Enter.mp3"; 
+    audio.play();
+}
+
+document.addEventListener('keypress', (e) => {
+     key.textContent = e.key;
+
+     if(e.key === "m") {
+        keyPresscontainer.style.background = "yellow";
+     }else if(e.key === "s") {
+        keyPresscontainer.style.background = "blue"; 
+     }else {
+        keyPresscontainer.style.background = "purple";
+     }
+
+     ring();
+});
+
+
