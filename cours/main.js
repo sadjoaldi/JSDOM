@@ -97,7 +97,44 @@ document.addEventListener('keypress', (e) => {
         keyPresscontainer.style.background = "purple";
      }
 
-     ring();
+    //  ring();
 });
 
+// ***********Scroll event*************
+// animation d'une navbarre
+const nav = document.querySelector("nav");
+window.addEventListener("scroll", () => {  
+
+    if (window.scrollY > 120) {
+        nav.style.top = 0;
+    }else {
+        nav.style.top = "-50px";
+    }
+    
+})
+
+// ****Form events*****
+
+
+const inputName = document.querySelector('input[type="text"]');
+const select = document.querySelector("select");
+const form = document.querySelector("form");
+let pseudo ="";
+let language = ""; 
+
+
+
+inputName.addEventListener('input', (e) => {
+    pseudo = e.target.value;
+    
+})
+
+select.addEventListener("input", (e) => {
+    language = e.target.value;
+})
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    
+})
 

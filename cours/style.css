@@ -49,16 +49,16 @@ button {
   transition: 0.2s ease-out;
   z-index: -1;
 }
-/* nav {
+nav {
   background: teal;
   position: fixed;
   width: 100%;
   height: 50px;
   top: -50px;
-  transition: 0.3s ease;
-  overflow: hidden;
+  transition: 0.5s ease;
+  /* overflow: hidden; */
 }
-nav::after {
+/* nav::after {
   content: "";
   height: 150px;
   width: 150px;
@@ -75,13 +75,13 @@ nav::after {
   transition: 0.25s;
   z-index: 20;
   opacity: 0;
-}
-nav:hover::after {
+} */
+/* nav:hover::after {
   opacity: 1;
-}
+} */
 ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 0;
-} */
+}
