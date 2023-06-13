@@ -136,5 +136,33 @@ select.addEventListener("input", (e) => {
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     
+    if (cgv.checked) {
+        document.querySelector("form > div").innerHTML = `
+        <h3>Pseudo : ${pseudo}</h3>
+        <h4>Langage préféré: ${language}</h4>        
+        `;
+        // on affiche le contenu des variables
+    }else{
+        alert("Veuiller accepter les CGV")
+    }
+    
 })
+
+// NB: pour une checkbox, on a pas besoin de declarer une variable c'est aussi valable pour les boutons.
+// pour injecter des balises, il faut utiliser: innerHTML;
+
+// *******Load Event *********
+window.addEventListener("load", () => {
+    console.log("document chargé !!");
+})
+
+// ****Les forEach *******
+const boxes = document.querySelectorAll(".box")
+boxes.forEach((box) => {
+    box.addEventListener("click", (e) => {
+        e.target.style.transform = "scale(0.7)"
+    })
+
+})
+
 
