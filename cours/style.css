@@ -58,7 +58,7 @@ nav {
   transition: 0.5s ease;
   /* overflow: hidden; */
 }
-/* nav::after {
+nav::after {
   content: "";
   height: 150px;
   width: 150px;
@@ -75,10 +75,10 @@ nav {
   transition: 0.25s;
   z-index: 20;
   opacity: 0;
-} */
-/* nav:hover::after {
+}
+nav:hover::after {
   opacity: 1;
-} */
+}
 ul {
   display: flex;
   justify-content: space-around;

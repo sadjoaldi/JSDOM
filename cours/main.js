@@ -237,4 +237,18 @@ document.body.addEventListener("click", (e) => {
 //   location.href = "htpp://twitter.fr"
 //  }permet de rediriger aussi vers un lien ou site
 
+// Navigator
+// console.log(navigator.userAgent);
+
+// Navigator et geolocalisation: voir la doc sur mdn
+
+// history
+// window.history.back(); permet de revenir en arrière
+// history.go(-2) permet de revenir en arrière en fonction nmbre de pages voulus.
+// console.log(history);
+
 // *****setProperty *******
+window.addEventListener("mousemove", (e) => {
+  nav.style.setProperty("--x", e.layerX + "px");
+  nav.style.setProperty("--y", e.layerY + "px");
+});
